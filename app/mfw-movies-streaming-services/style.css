@@ -1,0 +1,81 @@
+/* mfw-movies-streaming-services/style.css */
+
+/* Estilos generales compartidos */
+.mfw-streaming-container {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.mfw-streaming-container h1 {
+    font-weight: bold;
+}
+
+.mfw-streaming-container .form-control {
+    border-radius: 0.375rem;
+}
+
+.mfw-streaming-container .btn {
+    min-width: 120px;
+}
+
+.mfw-streaming-container .result h2 {
+    font-weight: 600;
+}
+
+/* =============================== */
+/* Página: /where-to-watch */
+.mfw-template-main .mfw-link-icon {
+    font-size: 0.8em;
+}
+
+.mfw-template-main .dropdown-menu {
+    min-width: auto;
+    width: 85px; 
+    padding: 0.25rem 0;
+}
+
+.mfw-template-main .dropdown > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    min-width: auto;
+    width: 85px;
+    max-width: 85px;
+}
+
+/* Página: /where-to-watch/advanced */
+.mfw-template-advanced .list-group-item-action {
+    transition: background-color 0.2s;
+}
+
+.mfw-template-advanced .list-group-item-action:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Página: /where-to-watch/advanced/subscription-most */
+.mfw-template-subscription-most .alert {
+    font-size: 0.95rem;
+}
+
+.mfw-template-subscription-most .list-group-item {
+    font-size: 1rem;
+}
+
+.mfw-template-subscription-most #movie-list li {
+    font-weight: 500;
+}
+
+.mfw-template-subscription-most .dropdown-menu {
+    min-width: auto;
+    width: 85px; 
+    padding: 0.25rem 0;
+}
+
+.mfw-template-subscription-most .dropdown > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    min-width: auto;
+    width: 85px;
+    max-width: 85px;
+}
+
