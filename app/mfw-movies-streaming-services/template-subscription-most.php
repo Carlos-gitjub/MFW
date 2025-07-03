@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../mfw-session/session.php';
+require_once __DIR__ . '/../mfw-security/functions.php';
 ?>
 <div class="mfw-streaming-container mfw-template-subscription-most"
 data-base-url="<?= mfw_url('/') ?>"
-data-csrf-token="<?= htmlspecialchars(mfw_session_get('csrf_token', '')) ?>">  <!-- /where-to-watch/advanced/subscription-most -->
+data-csrf-token="<?= htmlspecialchars(mfw_csrf_get_token()) ?>">  <!-- /where-to-watch/advanced/subscription-most -->
 
     <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
         <h1 class="text-primary mb-0" style="font-weight: bold;">
