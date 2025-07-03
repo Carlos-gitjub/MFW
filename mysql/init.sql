@@ -63,6 +63,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+-- Crear usuario mfwuser y darle permisos sobre la base de datos mfw
+CREATE USER IF NOT EXISTS 'mfwuser'@'%' IDENTIFIED BY 'mfwpass';
+GRANT ALL PRIVILEGES ON mfw.* TO 'mfwuser'@'%';
+FLUSH PRIVILEGES;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

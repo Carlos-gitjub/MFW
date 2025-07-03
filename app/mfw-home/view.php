@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../mfw-theme/theme.php';
 require_once __DIR__ . '/../mfw-url/helpers.php';
-require_once __DIR__ . '/../mfw-auth/session.php';
+require_once __DIR__ . '/../mfw-auth/auth.php';
 
 function mfw_home_view(): string
 {

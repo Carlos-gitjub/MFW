@@ -1,3 +1,11 @@
+<?php
+// mfw-login/template.php
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/../mfw-security/functions.php';
+?>
+
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
@@ -18,6 +26,8 @@
           <input type="password" id="password" name="password" class="form-control" required>
         </div>
 
+        <?php mfw_csrf_input(); ?>
+        
         <button type="submit" class="btn btn-primary w-100">Acceder</button>
       </form>
     </div>

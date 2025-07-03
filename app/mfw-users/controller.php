@@ -6,6 +6,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/view.php';
 require_once __DIR__ . '/model.php';
 require_once __DIR__ . '/../mfw-url/helpers.php';
+require_once __DIR__ . '/../mfw-security/functions.php';
 
 /**
  * Muestra el formulario de registro
@@ -33,6 +34,10 @@ function mfw_user_register_submit_controller(): string
 
     $username = trim($input['username'] ?? '');
     $password = $input['password'] ?? '';
+
+    // Validación CSRF usando la nueva función
+    $token = $_POST['csrf_token'] ?? null;
+    mfw_csrf_validate_and_respond($token);
 
     if ($username === '' || $password === '') {
         return mfw_user_register_view_with_error('Usuario y contraseña son obligatorios.');

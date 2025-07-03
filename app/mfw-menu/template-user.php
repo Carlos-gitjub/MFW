@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/../mfw-security/functions.php';
+?>
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand text-white" href="<?= mfw_url('/') ?>">MFW App</a>
@@ -14,7 +17,10 @@
   </ul>
 </div>
 
-      <a class="btn btn-danger" href="<?= mfw_url('/logout') ?>">Log out</a>
+      <form method="POST" action="<?= mfw_url('/logout') ?>" style="display: inline;">
+        <?php mfw_csrf_input(); ?>
+        <button type="submit" class="btn btn-danger">Log out</button>
+      </form>
     </div>
   </div>
 </nav>

@@ -1,4 +1,7 @@
-<?php require_once __DIR__ . '/../mfw-url/helpers.php'; ?>
+<?php 
+require_once __DIR__ . '/../mfw-url/helpers.php';
+require_once __DIR__ . '/../mfw-security/functions.php';
+?>
 
 <div class="row justify-content-center">
   <div class="col-md-6">
@@ -18,6 +21,8 @@
         <label for="password" class="form-label">Contraseña</label>
         <input type="password" id="password" name="password" class="form-control" required>
       </div>
+
+      <?php mfw_csrf_input(); ?>
 
       <button type="submit" class="btn btn-success w-100">Crear cuenta</button>
     </form>

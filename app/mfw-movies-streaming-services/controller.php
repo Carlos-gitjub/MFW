@@ -7,6 +7,7 @@ require_once __DIR__ . '/view.php';
 require_once __DIR__ . '/../mfw-tmdb-api/functions.php';
 require_once __DIR__ . '/../mfw-watchmode-api/functions.php';
 require_once __DIR__ . '/../mfw-auth/auth.php';
+require_once __DIR__ . '/../mfw-security/functions.php';
 
 /**
  * Controlador principal para /where-to-watch
@@ -89,6 +90,11 @@ function mfw_movies_streaming_services_subscription_most_result_controller(): st
     mfw_auth_require();
 
     $input = json_decode(file_get_contents('php://input'), true);
+    $csrf_token = $input['csrf_token'] ?? null;
+    
+    // Validar CSRF token usando la nueva función
+    mfw_csrf_validate_and_respond($csrf_token);
+
     $movies = $input['movies'] ?? [];
     $region = strtoupper(trim($_GET['region'] ?? 'ES'));
 

@@ -7,5 +7,5 @@ require_once __DIR__ . '/controller.php';
 require_once __DIR__ . '/../mfw-router/register.php';
 
 return [
-    mfw_register('GET', '/logout', 'mfw_auth_logout_controller'),
+    mfw_register('POST', '/logout', 'mfw_auth_logout_controller'),
 ];

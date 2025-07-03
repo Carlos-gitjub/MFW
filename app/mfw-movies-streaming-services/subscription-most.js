@@ -91,10 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const region = document.getElementById('regionInput').value;
         const newUrl = `${window.location.pathname}?region=${encodeURIComponent(region)}`;
         window.history.replaceState({}, '', newUrl);
+        const csrfToken = document.querySelector('.mfw-template-subscription-most')?.dataset.csrfToken || '';
         fetch(baseUrl + 'where-to-watch/advanced/subscription-most/result?region=' + encodeURIComponent(region), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ movies: movieListState })
+            body: JSON.stringify({
+                movies: movieListState,
+                csrf_token: csrfToken
+            })
         })
         .then(res => res.text())
         .then(html => {

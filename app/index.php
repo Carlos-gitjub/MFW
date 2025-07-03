@@ -5,6 +5,14 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/mfw-router/register.php';
 require_once __DIR__ . '/mfw-router/dispatch.php';
+require_once __DIR__ . '/mfw-security/functions.php';
+require_once __DIR__ . '/mfw-session/session.php';
+
+// Inicializar sesión de forma centralizada y segura
+mfw_session_start();
+
+// Generar token CSRF una vez por sesión
+mfw_csrf_generate();
 
 $routes = [];
 
