@@ -59,7 +59,7 @@
                         'buy' => 'Buy'
                     ][$source['type']] ?? ucfirst($source['type']);
 
-                    $price = ($source['type'] === 'sub') ? '(subscription)' : ($source['price'] . ' €');
+                    $price = ($source['type'] === 'sub') ? '(subscription)' : ($source['price']);
                     $url = $source['web_url'] ?? '#';
                 ?>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
