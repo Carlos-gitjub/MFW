@@ -10,21 +10,24 @@
             📊 <span class="ms-2">Given a list of titles, show which subscription platforms offer the most of them</span>
         </a>
 
-        <span class="list-group-item d-flex align-items-center text-muted">
+        <span class="list-group-item d-flex align-items-center text-muted justify-content-center">
             🔍 <span class="ms-2">Advanced Filtering</span>
         </span>
 
-        <span class="list-group-item d-flex align-items-center text-muted">
+        <span class="list-group-item d-flex align-items-center text-muted justify-content-center">
             🎯 <span class="ms-2">Filter by Quality, Price, Access Type (coming soon)</span>
         </span>
 
-        <span class="list-group-item d-flex align-items-center text-muted">
+        <span class="list-group-item d-flex align-items-center text-muted justify-content-center">
             🧪 <span class="ms-2">View Raw API Results (coming soon)</span>
         </span>
     </div>
 
-    <a href="<?= mfw_url('/where-to-watch') ?>" class="btn btn-outline-secondary mt-4">
-        ← Back to basic search
-    </a>
+ 
+    <div class="d-flex justify-content-center mt-4">
+        <a href="<?= mfw_url('/where-to-watch') ?>" class="btn btn-outline-secondary mt-4">
+            ← Back to basic search
+        </a>
+    </div>
 
 </div>
