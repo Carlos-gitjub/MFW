@@ -35,15 +35,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id`, `username`, `password`, `created_at`) VALUES
-(1, 'admin', '$2y$10$1VP3N51BgkmjPGPGapD21eQEepbrSxU98xgpZ.6VvYGISKYmvVerS', '2025-06-15 14:36:37'),
-(2, 'desarrollo', '$2y$10$jGUnRU5WKng1ayvUtMJUK.r2GXYUHAgqwIEGWs5n78X3rFL1fM202', '2025-06-17 17:33:41'),
-(3, 'desarrollo2', '$2y$10$8rXjdQDw6bVj15fWuBF/5OI068auZFDFoLwmPpmgJx3JRdVbJlVEG', '2025-06-17 17:37:28');
-
---
 -- Índices para tablas volcadas
 --
 
