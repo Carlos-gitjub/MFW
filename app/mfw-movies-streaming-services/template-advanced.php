@@ -1,12 +1,12 @@
 <div class="mfw-streaming-container mfw-template-advanced">  <!-- /where-to-watch/advanced -->
-    
-    <h1 class="mb-4 text-primary">🔎 Advanced Search Options</h1>
 
-    <p class="mb-4">Select an option below:</p>
+    <h1 class="mb-4 text-primary text-center">🔎 Advanced Search Options</h1>
+
+    <p class="mb-4 text-center">Select an option below:</p>
 
     <div class="list-group shadow-sm">
         <a href="<?= mfw_url('/where-to-watch/advanced/subscription-most') ?>"
-        class="list-group-item list-group-item-action d-flex align-items-center fw-semibold">
+        class="list-group-item list-group-item-action d-flex align-items-center justify-content-center fw-semibold">
             📊 <span class="ms-2">Given a list of titles, show which subscription platforms offer the most of them</span>
         </a>
 
@@ -26,4 +26,5 @@
     <a href="<?= mfw_url('/where-to-watch') ?>" class="btn btn-outline-secondary mt-4">
         ← Back to basic search
     </a>
+
 </div>
